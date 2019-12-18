@@ -29,3 +29,29 @@ var tor = require('tor-block');
 
 app.use(tor({path:'path_to_file'}));
 ```
+
+Changes from : v2.0:
+---------------------
+- If you need to log attacks in DB, need to specify the required database details like below.
+
+
+```
+var tor = require('tor-block');
+
+// 1. To Block Tor Request
+const tor_config = {
+    dbHost:process.env.HOST,
+    dbDialect:process.env.DIALECT,
+    dbName:process.env.DATABASE,
+    dbUser:process.env.USERNAME,
+    dbPass:process.env.PASSWORD,
+    tableName: tableName,
+    trackLocation: true
+};
+
+app.use(tor(tor_config));
+```
+
+This plugin use sequelize for inserting log data in DB.
+
+- If you need to track the Location of Request, need to enable trackLocation property to true in tor_config (Refer above config)

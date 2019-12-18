@@ -1,6 +1,6 @@
 {
   "name": "tor-block",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Secure your app from tor requests!",
   "main": "index.js",
   "directories": {
@@ -26,6 +26,9 @@
   "homepage": "https://github.com/rajkumarpb/tor-block#readme",
   "dependencies": {
     "dns": "^0.2.2",
-    "request-ip": "^2.1.3"
+    "pg": "^7.15.0",
+    "pg-hstore": "^2.3.3",
+    "request-ip": "^2.1.3",
+    "sequelize": "^5.21.3"
   }
 }
