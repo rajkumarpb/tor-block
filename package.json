@@ -1,6 +1,6 @@
 {
   "name": "tor-block",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Secure your app from tor requests!",
   "main": "index.js",
   "directories": {
